@@ -1,0 +1,8 @@
+{
+  "name": "dsl-generated dependencies",
+  "dependencies": {
+    "semantic": "latest",
+    "animate.css": "latest",
+    "css3-magic": "latest"
+  }
+}

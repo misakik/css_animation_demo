@@ -1,0 +1,50 @@
+/* ============================================== */
+.sample1
+  /* もともとの状態 */
+  width: 200px
+  +transition(width 0.5s ease-in-out)
+
+  /* 変化後（マウスオーバー）の状態 */
+  &:hover
+    width: 400px
+
+/* ============================================== */
+.sample2
+  /* もともとの状態 */
+  +transition(all 0.5s ease-in-out)
+
+  /* 変化後（マウスオーバー）の状態 */
+  &:hover
+    +transform(scale(2) rotate(-45deg))
+
+/* ============================================== */
+.sample3-1
+  +transition(all 0.5s ease-in-out)
+  &.changed
+    +transform(rotateY(180deg))
+
+/* ============================================== */
+.sample3-2
+  +transition(all 0.5s ease-in-out)
+  +transform-style(preserve-3d)
+  &.changed
+    +transform(rotateY(180deg))
+.parent
+  //+perspective(400px)
+
+/* ============================================== */
+.sample4
+  &.changed
+    +animation(wahaha 1s)
+
++keyframes(wahaha)
+  0%
+    +transform(scale(1))
+  10%,20%
+    +transform(scale(0.7) rotate(-15deg))
+  30%,50%,70%,90%
+    +transform(scale(2) rotate(30deg))
+  40%,60%,80% 
+    +transform(scale(2) rotate(-30deg))
+  100%
+    +transform(scale(1) rotate(0))
